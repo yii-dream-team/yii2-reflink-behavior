@@ -12,8 +12,8 @@ Attach the behavior to your controller class:
         return [
             'reflink' => [
                 'class' => '\yiidreamteam\reflink\ReflinkBehavior',
-                'refParamName' => 'ref',
-                'refSessionName' => 'referrerId',
+                'queryParam' => 'ref',
+                'sessionVar' => 'referrerId',
             ],
         ];
     }

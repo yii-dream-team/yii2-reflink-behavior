@@ -5,14 +5,14 @@ namespace yiidreamteam\reflink;
 /**
  * Class ReflinkBehavior
  *
- * @property string $refParamName
- * @property string $refSessionName
+ * @property string $queryParam
+ * @property string $sessionVar
  */
 class ReflinkBehavior extends \yii\base\Behavior
 {
 
-    public $refParamName = 'ref';
-    public $refSessionName = 'referrerId';
+    public $queryParam = 'ref';
+    public $sessionVar = 'referrerId';
 
     public function events()
     {
@@ -27,7 +27,7 @@ class ReflinkBehavior extends \yii\base\Behavior
      */
     public function getReferrerId()
     {
-        return \Yii::$app->session->get($this->refSessionName);
+        return \Yii::$app->session->get($this->sessionVar);
     }
 
     /**
@@ -36,8 +36,8 @@ class ReflinkBehavior extends \yii\base\Behavior
      */
     public function setReferrerId()
     {
-        if (($referrerId = \Yii::$app->request->get($this->refParamName))) {
-            \Yii::$app->session->set($this->refSessionName, $referrerId);
+        if (($referrerId = \Yii::$app->request->get($this->queryParam))) {
+            \Yii::$app->session->set($this->sessionVar, $referrerId);
         }
     }
 
