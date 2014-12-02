@@ -13,6 +13,13 @@ class ReflinkBehavior extends \yii\base\Behavior
 
     public $refParamName = 'ref';
     public $refSessionName = 'referrerId';
+    
+    public function events()
+    {
+        return [
+            \yii\web\Controller::EVENT_BEFORE_ACTION => 'getReferrerId',
+        ];
+    }
 
     /**
      * Get $refParamName from $_GET request and store to Session 
