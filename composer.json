@@ -1,0 +1,28 @@
+{
+    "name": "yii-dream-team/yii2-reflink-behavior",
+    "description": "Yii2 reflink behavior",
+	"keywords": ["file", "ref", "behavior"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Samoylov",
+            "email": "alexey.samoylov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/yii-dream-team/yii2-reflink-behavior"
+        }
+	],
+    "autoload": {
+        "psr-4": {
+            "yiidreamteam\\reflink\\": "./src"
+        }
+    }
+}
